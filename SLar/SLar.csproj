@@ -4,10 +4,30 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>MyloSoftworks.SerializeLib.archive</PackageId>
+        <Title>SerializeLib-archive</Title>
+        <Description>A file archive format using SerializeLib.</Description>
+        <Copyright>Mylo Softworks</Copyright>
+        <PackageProjectUrl>https://github.com/Mylo-Softworks/SerializeLib-Archive</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Mylo-Softworks/SerializeLib-Archive/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/Mylo-Softworks/SerializeLib-Archive</RepositoryUrl>
+        <RepositoryType>github</RepositoryType>
+        <PackageTags>Archive</PackageTags>
+        <PackageReleaseNotes>release 1.0.0:
+- Initial release</PackageReleaseNotes>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\SLar.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="MyloSoftworks.SerializeLib" Version="1.0.9" />
+
+      <None Include="bin\Debug\SLar.xml" Pack="true">
+          <PackageCopyToOutput>true</PackageCopyToOutput>
+      </None>
     </ItemGroup>
 
 </Project>

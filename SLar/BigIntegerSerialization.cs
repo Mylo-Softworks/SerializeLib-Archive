@@ -4,6 +4,9 @@ using SerializeLib.Interfaces;
 
 namespace SLar;
 
+/// <summary>
+/// Serialization override for BigInteger, can be registered.
+/// </summary>
 public class BigIntegerSerialization : ISerializableOverride<BigInteger>
 {
     public void Serialize(BigInteger target, Stream s)

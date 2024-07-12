@@ -16,6 +16,10 @@ public class PartialStream : Stream
         _size = size;
     }
 
+    /// <summary>
+    /// Read all the bytes that this stream has access to into a byte array.
+    /// </summary>
+    /// <returns>The byte array that was read into.</returns>
     public byte[] ReadToByteArray()
     {
         Seek(0, SeekOrigin.Begin);
@@ -28,7 +32,7 @@ public class PartialStream : Stream
     {
         _parent.Flush();
     }
-
+    
     public override int Read(byte[] buffer, int offset, int count)
     {
         var remaining = Length - Position;
